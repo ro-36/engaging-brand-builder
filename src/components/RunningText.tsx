@@ -9,7 +9,7 @@ type RunningTextProps = {
 
 const RunningText = ({ text, className }: RunningTextProps) => {
   return (
-    <div className={cn("w-full bg-primary/10 py-2 overflow-hidden", className)}>
+    <div className={cn("w-full bg-primary/10 py-2 overflow-hidden sticky top-16 z-10", className)}>
       <div className="animate-marquee whitespace-nowrap">
         <span className="text-sm font-medium text-primary inline-block px-4">
           {text}
