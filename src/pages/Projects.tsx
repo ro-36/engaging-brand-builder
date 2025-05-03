@@ -2,22 +2,22 @@
 import React from 'react';
 import { ThemeProvider } from '../components/ThemeProvider';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import ProjectsComponent from '../components/Projects';
 
-const HomePage = () => {
+const ProjectsPage = () => {
   return (
     <Layout>
-      <Hero />
+      <ProjectsComponent />
     </Layout>
   );
 };
 
-const Index = () => {
+const Projects = () => {
   return (
     <ThemeProvider>
-      <HomePage />
+      <ProjectsPage />
     </ThemeProvider>
   );
 };
 
-export default Index;
+export default Projects;

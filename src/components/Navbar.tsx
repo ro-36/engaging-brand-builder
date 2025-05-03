@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
@@ -29,12 +30,13 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Resume', href: '#resume' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '/skills' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Resume', href: '/resume' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -47,18 +49,18 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 font-display font-bold text-xl">
-            <a href="#home" className="text-foreground">Portfolio</a>
+            <Link to="/" className="text-foreground">Portfolio</Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="nav-item"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button
               variant="ghost"
@@ -98,14 +100,14 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
         <div className="md:hidden bg-background/95 backdrop-blur-md shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-muted"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

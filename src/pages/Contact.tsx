@@ -2,22 +2,22 @@
 import React from 'react';
 import { ThemeProvider } from '../components/ThemeProvider';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import ContactComponent from '../components/Contact';
 
-const HomePage = () => {
+const ContactPage = () => {
   return (
     <Layout>
-      <Hero />
+      <ContactComponent />
     </Layout>
   );
 };
 
-const Index = () => {
+const Contact = () => {
   return (
     <ThemeProvider>
-      <HomePage />
+      <ContactPage />
     </ThemeProvider>
   );
 };
 
-export default Index;
+export default Contact;

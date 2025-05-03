@@ -2,22 +2,22 @@
 import React from 'react';
 import { ThemeProvider } from '../components/ThemeProvider';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import ResumeComponent from '../components/Resume';
 
-const HomePage = () => {
+const ResumePage = () => {
   return (
     <Layout>
-      <Hero />
+      <ResumeComponent />
     </Layout>
   );
 };
 
-const Index = () => {
+const Resume = () => {
   return (
     <ThemeProvider>
-      <HomePage />
+      <ResumePage />
     </ThemeProvider>
   );
 };
 
-export default Index;
+export default Resume;

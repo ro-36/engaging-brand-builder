@@ -2,22 +2,24 @@
 import React from 'react';
 import { ThemeProvider } from '../components/ThemeProvider';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import AboutComponent from '../components/About';
+import Milestones from '../components/Milestones';
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <Layout>
-      <Hero />
+      <AboutComponent />
+      <Milestones />
     </Layout>
   );
 };
 
-const Index = () => {
+const About = () => {
   return (
     <ThemeProvider>
-      <HomePage />
+      <AboutPage />
     </ThemeProvider>
   );
 };
 
-export default Index;
+export default About;
