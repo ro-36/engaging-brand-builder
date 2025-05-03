@@ -4,6 +4,7 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import RunningText from './RunningText';
 
 const Hero = () => {
   return (
@@ -63,6 +64,12 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
+      {/* Running Text Section */}
+      <RunningText 
+        text="✨ Passionate about creating beautiful, user-friendly web experiences ✨ Open to freelance opportunities and collaborations ✨ Always learning and expanding my skill set"
+        className="py-3 rounded-none sticky top-16 z-10 shadow-sm"
+      />
 
       {/* About Me Brief Section */}
       <section className="py-16 bg-muted/10 rounded-3xl">
@@ -139,8 +146,13 @@ const Hero = () => {
                     <span className="text-sm text-primary font-medium">{post.category}</span>
                     <h3 className="text-xl font-semibold mt-2 mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
                     <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
-                    <div className="flex items-center text-sm text-muted-foreground mt-auto">
-                      {post.date}
+                    <div className="flex items-center justify-between mt-auto">
+                      <span className="text-sm text-muted-foreground">
+                        {post.date}
+                      </span>
+                      <span className="text-sm font-medium text-primary group-hover:underline flex items-center">
+                        Read more <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                      </span>
                     </div>
                   </div>
                 </div>
