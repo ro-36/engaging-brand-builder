@@ -150,6 +150,9 @@ export default {
 			backgroundSize: {
 				"grid-size": "40px 40px",
 			},
+			boxShadow: {
+				card: 'var(--card-shadow)'
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

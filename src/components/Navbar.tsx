@@ -36,7 +36,6 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
     { name: 'Projects', href: '/projects' },
     { name: 'Resume', href: '/resume' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -62,6 +61,9 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
                 {item.name}
               </Link>
             ))}
+            <Link to="/contact" className="ml-2">
+              <Button className="contact-button">Contact</Button>
+            </Link>
             <Button
               variant="ghost"
               size="icon"
@@ -109,6 +111,13 @@ const Navbar = ({ toggleTheme, isDarkMode }: NavbarProps) => {
                 {item.name}
               </Link>
             ))}
+            <Link 
+              to="/contact" 
+              className="block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button className="w-full contact-button">Contact</Button>
+            </Link>
           </div>
         </div>
       )}

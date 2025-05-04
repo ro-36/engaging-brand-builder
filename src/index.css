@@ -25,6 +25,10 @@
     --input: 214 32% 91%;
     --ring: 226 100% 94%;
     --radius: 0.75rem;
+    
+    /* New improved light mode colors */
+    --contact-btn: 154 64% 45%;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .dark {
@@ -47,6 +51,9 @@
     --border: 222 47% 18%;
     --input: 222 47% 18%;
     --ring: 240 4.9% 33%;
+    
+    /* Dark mode contact button color */
+    --contact-btn: 154 64% 45%;
   }
 }
 
@@ -95,6 +102,16 @@
 
   .glow-button {
     @apply bg-primary/90 hover:bg-primary text-white shadow-lg hover:shadow-primary/50 transition-all duration-300;
+  }
+  
+  /* Adding card styles with shadows for better separation in light mode */
+  .card-with-shadow {
+    @apply bg-card shadow-lg border border-border rounded-lg p-6;
+  }
+  
+  /* Contact button style */
+  .contact-button {
+    @apply bg-[hsl(var(--contact-btn))] text-white hover:bg-[hsl(var(--contact-btn))] hover:opacity-90 transition-opacity;
   }
 }
 
