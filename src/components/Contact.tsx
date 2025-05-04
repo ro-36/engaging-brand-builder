@@ -122,7 +122,7 @@ const Contact = () => {
                 <label htmlFor="message" className="text-sm font-medium">Message</label>
                 <Textarea id="message" placeholder="Your message" rows={6} required />
               </div>
-              <Button type="submit" size="lg" className="w-full sm:w-auto">
+              <Button type="submit" size="lg" className="glow-button w-full sm:w-auto">
                 Send Message
               </Button>
             </form>

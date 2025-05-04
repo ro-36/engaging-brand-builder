@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Poppins', 'sans-serif'],
+				sans: ['Roboto', 'sans-serif'],
+				display: ['Roboto', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -121,6 +121,14 @@ export default {
 				"marquee": {
 					"0%": { transform: "translateX(0)" },
 					"100%": { transform: "translateX(-50%)" }
+				},
+				"pulse-glow": {
+					"0%, 100%": { 
+						boxShadow: "0 0 10px 2px rgba(127, 90, 240, 0.5)"
+					},
+					"50%": {
+						boxShadow: "0 0 20px 5px rgba(127, 90, 240, 0.8)"
+					}
 				}
 			},
 			animation: {
@@ -134,7 +142,14 @@ export default {
 				"slide-in-bottom": "slide-in-bottom 0.5s ease-out",
 				"slide-in-top": "slide-in-top 0.5s ease-out",
 				"marquee": "marquee 25s linear infinite",
-			}
+				"pulse-glow": "pulse-glow 3s infinite ease-in-out",
+			},
+			backgroundImage: {
+				"grid-pattern": "linear-gradient(to right, rgba(127, 90, 240, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(127, 90, 240, 0.1) 1px, transparent 1px)",
+			},
+			backgroundSize: {
+				"grid-size": "40px 40px",
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

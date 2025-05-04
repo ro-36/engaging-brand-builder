@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <div className="flex flex-col gap-20">
       <section id="home" className="min-h-screen hero-gradient flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-grid-pattern bg-grid-size opacity-[0.15] pointer-events-none"></div>
         <div className="section-container flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in">
-            <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
               Hello, I'm a Student & Developer
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -48,7 +48,7 @@ const Hero = () => {
           
           <div className="w-full md:w-1/2 flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className={cn(
-              "relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-background shadow-xl",
+              "relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-background shadow-xl profile-glow-ring",
               "before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary/20 before:to-secondary/20 before:z-10"
             )}>
               <div className="tilt-card w-full h-full">
